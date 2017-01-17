@@ -1,5 +1,5 @@
 body {
-  font-family: Roboto;
+  font-family: Audiowide;
   background-image: url(images/game_board_background.jpg);
   background-repeat: no-repeat;
 }
@@ -58,6 +58,7 @@ body {
   color: red;
   float: left;
   margin-top: 5vh;
+  position: relative;
 }
 
 .stats{
@@ -134,6 +135,10 @@ body {
 .row3 {
   position: relative;
   top: 50%;
+}
+
+.win {
+  color:red;
 }
 
 #about_me_photo {
