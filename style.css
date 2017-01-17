@@ -1,0 +1,119 @@
+body {
+  font-family: Roboto;
+  background-image: url(images/game_board_background.jpg);
+  background-repeat: no-repeat;
+}
+
+#header {
+  width 100vw;
+  height; 15vh;
+  background-color: rgba(102, 102, 102, .7);
+}
+
+#header img{
+  width: 15%;
+}
+
+.header_menu {
+  text-align: center;
+  width: 70vw;
+  margin: 1% 10% 0 0;
+}
+
+.game_menu {
+  margin: 0;
+}
+
+.game_title {
+  margin-top: 1%;
+  margin-bottom: 0;
+  padding-bottom: 2vh;
+}
+
+.game_title a {
+  margin-bottom: 2%;
+}
+
+#header a {
+  text-decoration: none;
+  color: red;
+}
+
+#header a:hover{
+  color: blue;
+}
+
+.main-container {
+  width:90vw;
+  margin-left: 5vw;
+  height: 85vh;
+}
+
+.stats-container {
+  height: 75vh;
+  width: 20%;
+  background-color: rgba(102, 102, 102, .7);
+  color: red;
+  float: left;
+  margin-top: 5vh;
+}
+
+.stats{
+  list-style-type: none;
+}
+
+.stats h3 {
+  font-size: 50px;
+}
+
+.stats li {
+  font-size: 20px;
+}
+
+.reset{
+  margin-left: 30%;
+  border-radius: 5%;
+}
+
+#game_area{
+  width: 80%;
+  height:75vh;
+  float: right;
+  margin-top: 5vh;
+}
+
+.row {
+  margin-left: 1%;
+  margin-top: 3%;
+}
+
+.front{
+  background-image:url(images/card_background.jpg);;
+  border-top-left-radius: 15%;
+  border-top-right-radius: 15%;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+  width: 7vw;
+}
+
+.back {
+  background-image:url(images/card_background.jpg);;
+  border-top-left-radius: 15%;
+  border-top-right-radius: 15%;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+  width: 7vw;
+  display: none;
+}
+
+.front img {
+  width: 5vw;
+  height: 20vh;
+  margin-left:20%;
+}
+
+.back img {
+  width: 5vw;
+  height: 20vh;
+  margin-left:20%;
+}
