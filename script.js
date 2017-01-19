@@ -4,6 +4,10 @@ var firstCardClicked = null;
 var secondCardClicked = null;
 var totalPossibleMatches = 9;
 var matchCounter = 0;
+var matches = 0;
+var attemps = 0;
+var gamesPlayed = 0;
+var accuracy = Math.round(matches / attemps);
 
 function initGame() {
   $('.win').hide();
@@ -62,4 +66,21 @@ function timeOut() {
     console.log('no match found');
     $('#game-area').removeAttr('style');
   }, 2500);
+}
+
+function displayStats() {
+  $('.games_played_value').text(gamesPlayed);
+  $('.attemps_value').text(attemps);
+  $('.accuracy_value').text(accuracy + "%");
+}
+
+function resetStats () {
+  accuray = 0;
+  matches = 0;
+  attempts = 0;
+  displayStats();
+}
+
+function resetGame(resetStats) {
+  gamesPlayed+=1;
 }
