@@ -7,7 +7,7 @@ var matchCounter = 0;
 var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
-var accuracy = Math.round((matches / attempts) * 100);
+var accuracy;
 
 function initGame() {
   $('.win').hide();
@@ -16,7 +16,7 @@ function initGame() {
 }
 
 
-function cardClicked(flipCard){
+function cardClicked(){
 
   if (firstCardClicked === null) {
     // set first card equal to firstCardClicked
@@ -32,34 +32,35 @@ function cardClicked(flipCard){
     secondCardClicked.css('pointer-events', 'none');
     console.log('comparing cards for match');
     attempts++;
-    displayStats();
     // comapre firstCardClicked and secondCardClicked for a match
     if (firstCardClicked.find('img').attr('src') === secondCardClicked.find('img').attr('src')){
       console.log('match found');
       matchCounter++;
       matches++;
+      accuracy = parseInt(matches / attempts * 100);
+      $('.accuracy_value').text(accuracy + '%');
       firstCardClicked = null;
       secondCardClicked = null;
-
       // if a match is found increase counter
       if (matchCounter === totalPossibleMatches){
         $('.card').hide();
         $('.win').show();
       } else {
-        return;
+        displayStats();
       }
     } else {
       /* If no match is found
       Make game board unclickable and time and when the timer runs out
       Reset the played clicked cards and make game area clickable again */
       $('#game-area').css('pointer-events', 'none');
+      accuracy = parseInt(matches / attempts * 100);
+      $('.accuracy_value').text(accuracy + '%');
+      displayStats();
       timeOut();
       firstCardClicked = null;
       secondCardClicked = null;
-      return;
     }
   }
-
 }
 
 function timeOut() {
@@ -73,7 +74,7 @@ function timeOut() {
 
 function displayStats() {
   $('.games_played_value').text(gamesPlayed);
-  $('.accuracy_value').text(accuracy);
+
   $('.attempts_value').text(attempts);
   console.log('stats stats stats');
 }
