@@ -13,10 +13,10 @@ function initGame() {
   $('.win').hide();
   console.log('game started');
   $('.card').on('click', cardClicked);
+  $('.reset').click(resetGame);
 }
 
-
-function cardClicked(){
+function cardClicked() {
 
   if (firstCardClicked === null) {
     // set first card equal to firstCardClicked
@@ -39,6 +39,7 @@ function cardClicked(){
       matches++;
       accuracy = parseInt(matches / attempts * 100);
       $('.accuracy_value').text(accuracy + '%');
+      displayStats();
       firstCardClicked = null;
       secondCardClicked = null;
       // if a match is found increase counter
@@ -63,6 +64,7 @@ function cardClicked(){
   }
 }
 
+
 function timeOut() {
   setTimeout (function(){
     firstCardBack.show();
@@ -74,20 +76,23 @@ function timeOut() {
 
 function displayStats() {
   $('.games_played_value').text(gamesPlayed);
-
   $('.attempts_value').text(attempts);
-  console.log('stats stats stats');
 }
 
 function resetStats (displayStats) {
+  $('.accuracy_value').text('0%');
+  $('.attempts_value').text('0');
   accuray = 0;
   matches = 0;
   attempts = 0;
+  matchCounter = 0;
 }
 
 function resetGame() {
-  gamesPlayed+=1;
+  gamesPlayed++;
   $('.games_played_value').text(gamesPlayed);
+  $('.win').hide();
+  $('.card').removeAttr('style');
+  $('.back').removeAttr('style');
+  resetStats();
 }
-
-$('.reset').on('click', resetGame);
