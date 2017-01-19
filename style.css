@@ -93,35 +93,27 @@ body {
   margin-top: 3%;
 }
 
+.back, .front {
+
+  background-position: center;
+  border-top-left-radius: 15%;
+  border-top-right-radius: 15%;
+  border-bottom-left-radius: 15%;
+  border-bottom-right-radius: 15%;
+  width: 7vw;
+  position: absolute;
+}
+
 .back {
   background-image:url(images/card_background.jpg);
-  background-position: center;
-  border-top-left-radius: 15%;
-  border-top-right-radius: 15%;
-  border-bottom-left-radius: 15%;
-  border-bottom-right-radius: 15%;
-  width: 7vw;
-  position: absolute;
 }
 
-.front{
+
+.front {
   background-image:url(images/card_background.jpg);
-  background-position: center;
-  border-top-left-radius: 15%;
-  border-top-right-radius: 15%;
-  border-bottom-left-radius: 15%;
-  border-bottom-right-radius: 15%;
-  width: 7vw;
-  position: absolute;
 }
 
-.front img {
-  width: 5vw;
-  height: 20vh;
-  margin-left:15%;
-}
-
-.back img {
+.front img, .back img {
   width: 5vw;
   height: 20vh;
   margin-left:15%;
@@ -139,6 +131,7 @@ body {
 
 .win {
   color:red;
+  text-align: center;
 }
 
 #about_me_photo {
