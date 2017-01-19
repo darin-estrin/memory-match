@@ -6,6 +6,7 @@ var totalPossibleMatches = 9;
 var matchCounter = 0;
 
 function initGame() {
+  $('.win').hide();
   console.log('game started');
   $('.card').on('click', cardClicked);
 }
@@ -36,7 +37,8 @@ function cardClicked(flipCard){
 
       // if a match is found increase counter
       if (matchCounter === totalPossibleMatches){
-        $('#game-area').html("<h1 class='win'>Congratulations, you won!<h1>");
+        $('.card').hide();
+        $('.win').show();
       } else {
         return;
       }
