@@ -8,9 +8,14 @@ var matches = 0;
 var attempts = 0;
 var gamesPlayed = 0;
 var accuracy;
+var frontCardElements;
+
+var cards = ['images/ork_logo_card.png', 'images/tryanid_logo.png', 'images/chaos_daemon.jpg', 'images/chaos_daemon.jpg', 'images/ork_logo_card.png','images/tryanid_logo.png','images/chaos_card_logo.png' ,'images/chaos_card_logo.png' ,'images/tau_logo.png' ,'images/tau_logo.png', 'images/ultramarine_card.png', 'images/ultramarine_card.png', 'images/dark_eldar_logo.png', 'images/dark_eldar_logo.png', 'images/weird_boy.png', 'images/weird_boy.png', 'images/vostroyan.png', 'images/vostroyan.png'];
+
 
 function initGame() {
   $('.win').hide();
+  randomizeCards();
   console.log('game started');
   $('.card').on('click', cardClicked);
   $('.reset').click(resetGame);
@@ -95,4 +100,20 @@ function resetGame() {
   $('.card').removeAttr('style');
   $('.back').removeAttr('style');
   resetStats();
+}
+
+function randomizeCards () {
+  // Randomize cards
+  frontCardElements = $(document).find('.front');
+  var randomCards = [];
+  var spliced = [];
+
+  for (var i = cards.length - 1; i >=0; i--) {
+    spliced = cards.splice(Math.floor(Math.random() * cards.length), 1);
+    randomCards.push(spliced[0]);
+  }
+
+  for (var j = 0; j < frontCardElements.length; j++) {
+    $(frontCardElements[j]).append("<img src='" + randomCards[j] + "'/>");
+  }
 }
