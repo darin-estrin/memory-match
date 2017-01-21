@@ -104,21 +104,11 @@ body {
   position: absolute;
 }
 
-.back {
-  background-image:url(images/card_background.jpg);
-}
-
-
-.front {
-  background-image:url(images/card_background.jpg);
-}
-
-.front img, .back img {
-  width: 5vw;
+.back img, .front img {
+  width: 8vw;
   height: 20vh;
-  margin-left:15%;
-  padding:10% 0;
 }
+
 
 .row2 {
   position: relative;

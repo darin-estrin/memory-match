@@ -10,7 +10,7 @@ var gamesPlayed = 0;
 var accuracy;
 var frontCardElements;
 
-var cards = ['images/ork_logo_card.png', 'images/tryanid_logo.png', 'images/chaos_daemon.jpg', 'images/chaos_daemon.jpg', 'images/ork_logo_card.png','images/tryanid_logo.png','images/chaos_card_logo.png' ,'images/chaos_card_logo.png' ,'images/tau_logo.png' ,'images/tau_logo.png', 'images/ultramarine_card.png', 'images/ultramarine_card.png', 'images/dark_eldar_logo.png', 'images/dark_eldar_logo.png', 'images/weird_boy.png', 'images/weird_boy.png', 'images/vostroyan.png', 'images/vostroyan.png'];
+var cards = ['images/bigga_ork.png', 'images/bigga_ork.png', 'images/chaos_card.jpg', 'images/chaos_card.jpg', 'images/eldar_card.jpg', 'images/eldar_card.jpg', 'images/enraged_ork.jpg', 'images/enraged_ork.jpg', 'images/imperial_guard_card.png', 'images/imperial_guard_card.png', 'images/necron_card.jpg', 'images/necron_card.jpg', 'images/tau_card.png', 'images/tau_card.png', 'images/terminator_card.png', 'images/terminator_card.png', 'images/tyranid.png', 'images/tyranid.png'];
 
 
 function initGame() {
