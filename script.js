@@ -15,10 +15,11 @@ var cards = ['images/bigga_ork.png', 'images/bigga_ork.png', 'images/chaos_card.
 
 function initGame() {
   $('.win').hide();
-  randomizeCards();
   console.log('game started');
   $('.card').on('click', cardClicked);
   $('.reset').click(resetGame);
+  $('.reset').click(randomizeCards);
+  randomizeCards();
 }
 
 function cardClicked() {
@@ -99,17 +100,19 @@ function resetGame() {
   $('.win').hide();
   $('.card').removeAttr('style');
   $('.back').removeAttr('style');
+  $('.front img').remove();
   resetStats();
 }
 
 function randomizeCards () {
   // Randomize cards
+  var sliced = cards.slice(0, cards.length);
   frontCardElements = $(document).find('.front');
   var randomCards = [];
   var spliced = [];
 
-  for (var i = cards.length - 1; i >=0; i--) {
-    spliced = cards.splice(Math.floor(Math.random() * cards.length), 1);
+  for (var i = sliced.length - 1; i >=0; i--) {
+    spliced = sliced.splice(Math.floor(Math.random() * sliced.length), 1);
     randomCards.push(spliced[0]);
   }
 
