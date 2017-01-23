@@ -75,6 +75,8 @@ function timeOut() {
   setTimeout (function(){
     firstCardBack.show();
     secondCardBack.show();
+    firstCardBack.parent('.card').removeClass('flipped');
+    secondCardBack.parent('.card').removeClass('flipped');
     console.log('no match found');
     $('#game-area').removeAttr('style');
   }, 2500);
@@ -106,14 +108,17 @@ function resetGame() {
 
 function randomizeCards () {
   // Randomize cards
-  var sliced = cards.slice(0, cards.length);
+  // copy the random cards array
+  var slicedCardsArray = cards.slice(0, cards.length);
   frontCardElements = $(document).find('.front');
+  // a random selected card from the slicedCardsArray will be added to this array;
   var randomCards = [];
-  var spliced = [];
+  // removes the card from the slicedCardsArray so a duplicate card cant be added to the randomCards array;
+  var splicedCardsArray = [];
 
-  for (var i = sliced.length - 1; i >=0; i--) {
-    spliced = sliced.splice(Math.floor(Math.random() * sliced.length), 1);
-    randomCards.push(spliced[0]);
+  for (var i = slicedCardsArray.length - 1; i >=0; i--) {
+    splicedCardsArray = slicedCardsArray.splice(Math.floor(Math.random() * slicedCardsArray.length), 1);
+    randomCards.push(splicedCardsArray[0]);
   }
 
   for (var j = 0; j < frontCardElements.length; j++) {
