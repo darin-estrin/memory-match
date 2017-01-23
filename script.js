@@ -30,6 +30,9 @@ function cardClicked() {
     firstCardBack = $(this).find('.back');
     firstCardBack.hide();
     firstCardClicked.css('pointer-events', 'none');
+    $('.card').on('click', function(){
+         $(this).addClass('flipped');
+      });
   } else {
     // set second card equal to secondCardClicked
     secondCardClicked = $(this).find('.front');
@@ -38,6 +41,9 @@ function cardClicked() {
     secondCardClicked.css('pointer-events', 'none');
     console.log('comparing cards for match');
     attempts++;
+    $('.card').on('click', function(){
+         $(this).addClass('flipped');
+      });
     // comapre firstCardClicked and secondCardClicked for a match
     if (firstCardClicked.find('img').attr('src') === secondCardClicked.find('img').attr('src')){
       console.log('match found');
@@ -75,6 +81,8 @@ function timeOut() {
   setTimeout (function(){
     firstCardBack.show();
     secondCardBack.show();
+    firstCardBack.parent('.card').removeClass('flipped');
+    secondCardBack.parent('.card').removeClass('flipped');
     console.log('no match found');
     $('#game-area').removeAttr('style');
   }, 2500);

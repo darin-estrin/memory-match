@@ -68,11 +68,11 @@ body {
 }
 
 .stats h3 {
-  font-size: 5vmin;
+  font-size: 3vmin;
 }
 
 .stats li {
-  font-size: 3vmin;
+  font-size: 2vmin;
 }
 
 .reset{
@@ -94,7 +94,6 @@ body {
 }
 
 .back, .front {
-
   background-position: center;
   border-top-left-radius: 15%;
   border-top-right-radius: 15%;
@@ -104,11 +103,11 @@ body {
   position: absolute;
 }
 
+
 .back img, .front img {
   width: 8vw;
-  height: 20vh;
+  height: 22vh;
 }
-
 
 .row2 {
   position: relative;
@@ -148,4 +147,23 @@ float: left;
 
 #about_me_details ul {
   list-style-type: none;
+}
+
+.flip-container .card.flipped {
+  transform: rotateY(-180deg);
+  transform-origin: 35%;
+}
+
+.flip-container .card {
+  transform-style: preserve-3d;
+  transition: 0.5s;
+}
+
+.flip-container .card .front {
+  -webkit-backface-visibility: hidden;
+    z-index: 1;
+}
+
+.flip-container .card .front {
+  transform: rotateY(-180deg);
 }
