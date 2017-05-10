@@ -5,7 +5,7 @@ body {
 }
 
 #header {
-  width 100vw;
+  width: 100vw;
   min-height: 15vh;
   background-color: rgba(102, 102, 102, .7);
 }
@@ -147,4 +147,24 @@ float: left;
 
 #about_me_details ul {
   list-style-type: none;
+}
+
+.game-inactive {
+  display: none;
+}
+
+@media only screen and (max-width: 630px) {
+  .game-active {
+    display: none;
+  }
+
+  body {
+    background: none;
+  }
+
+  .game-inactive {
+    display: block;
+    text-align: center;
+    margin-top: 50%;
+  }
 }

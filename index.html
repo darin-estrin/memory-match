@@ -1,8 +1,8 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Memory Match | Home</title>
 
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
@@ -14,84 +14,52 @@
   </head>
   <body>
 
-    <!-- Header -->
-    <div id="header">
-      <img src="images/header_logo.jpeg" alt="Game Logo">
+    <div class='game-active'>
+      <!-- Header -->
+      <div id="header">
+        <img src="images/header_logo.jpeg" alt="Game Logo">
 
-      <div class="header_menu">
-        <h2 class='game_menu'><a href="#">Game Settings</a></h2>
-        <h1 class="game_title"><a href="about.html">About</a></h1>
-      </div>
-
-    </div>
-
-    <!-- Body Container -->
-    <div class="main-container">
-
-      <!-- Side panel for game info -->
-      <div class="stats-container">
-
-        <ul class="stats">
-          <h3>Stats:</h3>
-          <li class="games_played" label="Games Played" value="">Times Played:</li>
-          <li class="games_played_value">0</li>
-            <br>
-            <br>
-          <li class="attempts" label="attempts" value="">Number of tries:</li>
-          <li class='attempts_value'>0</li>
-            <br>
-            <br>
-          <li class="accuracy" label="Accuracy" value="">Accuracy:</li>
-          <li class='accuracy_value'>0%</li>
-          </ul>
-          <br>
-          <br>
-
-        <button class="reset btn btn-danger">Reset Game</button>
+        <div class="header_menu">
+          <h2 class='game_menu'><a href="#">Game Settings</a></h2>
+          <h1 class="game_title"><a href="about.html">About</a></h1>
+        </div>
 
       </div>
 
+      <!-- Body Container -->
+      <div class="main-container">
 
-      <!-- Main Game Container Div -->
-      <div id="game-area">
-        <h1 class='win'>Congratulations, You Won!!!!</h1>
-        <!-- Row #1  -->
-        <div class='row row1'>
+        <!-- Side panel for game info -->
+        <div class="stats-container">
 
-          <!-- Card #1  -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
-              </div>
-            </div>
-          </div>
+          <ul class="stats">
+            <h3>Stats:</h3>
+            <li class="games_played" label="Games Played" value="">Times Played:</li>
+            <li class="games_played_value">0</li>
+              <br>
+              <br>
+            <li class="attempts" label="attempts" value="">Number of tries:</li>
+            <li class='attempts_value'>0</li>
+              <br>
+              <br>
+            <li class="accuracy" label="Accuracy" value="">Accuracy:</li>
+            <li class='accuracy_value'>0%</li>
+            </ul>
+            <br>
+            <br>
 
-          <!-- Card #2  -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
-              </div>
-            </div>
-          </div>
+          <button class="reset btn btn-danger">Reset Game</button>
 
-          <!-- Card #3  -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
-              </div>
-            </div>
-          </div>
+        </div>
 
-            <!-- Card #4  -->
+
+        <!-- Main Game Container Div -->
+        <div id="game-area">
+          <h1 class='win'>Congratulations, You Won!!!!</h1>
+          <!-- Row #1  -->
+          <div class='row row1'>
+
+            <!-- Card #1  -->
             <div class='flip-container'>
               <div class="col-xs-2 card">
                 <div class='front'>
@@ -102,177 +70,216 @@
               </div>
             </div>
 
-          <!-- Card #5 -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
+            <!-- Card #2  -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
               </div>
             </div>
+
+            <!-- Card #3  -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
+              </div>
+            </div>
+
+              <!-- Card #4  -->
+              <div class='flip-container'>
+                <div class="col-xs-2 card">
+                  <div class='front'>
+                  </div>
+                  <div class='back'>
+                    <img src="images/card-back.png">
+                  </div>
+                </div>
+              </div>
+
+            <!-- Card #5 -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card #6 -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
+              </div>
+            </div>
+          <!-- End of Row #1  -->
           </div>
 
-          <!-- Card #6 -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
+
+          <!-- Row #2 -->
+          <div class='row row2'>
+
+            <!-- Card #7 -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
               </div>
             </div>
+
+            <!-- Card #8 -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card #9 -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card #10 -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card #11 -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card #12 -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
+              </div>
+            </div>
+          <!-- End of Row #2  -->
           </div>
-        <!-- End of Row #1  -->
+
+
+          <!-- Row #3  -->
+          <div class='row row3'>
+
+            <!-- Card #13 -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card #14 -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card #15 -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card #16 -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card #17 -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
+              </div>
+            </div>
+
+            <!-- Card #18 -->
+            <div class='flip-container'>
+              <div class="col-xs-2 card">
+                <div class='front'>
+                </div>
+                <div class='back'>
+                  <img src="images/card-back.png">
+                </div>
+              </div>
+            </div>
+          <!-- End of Row #3  -->
+          </div>
+
+        <!-- End of #game-area-->
         </div>
-
-
-        <!-- Row #2 -->
-        <div class='row row2'>
-
-          <!-- Card #7 -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
-              </div>
-            </div>
-          </div>
-
-          <!-- Card #8 -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
-              </div>
-            </div>
-          </div>
-
-          <!-- Card #9 -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
-              </div>
-            </div>
-          </div>
-
-          <!-- Card #10 -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
-              </div>
-            </div>
-          </div>
-
-          <!-- Card #11 -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
-              </div>
-            </div>
-          </div>
-
-          <!-- Card #12 -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
-              </div>
-            </div>
-          </div>
-        <!-- End of Row #2  -->
-        </div>
-
-
-        <!-- Row #3  -->
-        <div class='row row3'>
-
-          <!-- Card #13 -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
-              </div>
-            </div>
-          </div>
-
-          <!-- Card #14 -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
-              </div>
-            </div>
-          </div>
-
-          <!-- Card #15 -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
-              </div>
-            </div>
-          </div>
-
-          <!-- Card #16 -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
-              </div>
-            </div>
-          </div>
-
-          <!-- Card #17 -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
-              </div>
-            </div>
-          </div>
-
-          <!-- Card #18 -->
-          <div class='flip-container'>
-            <div class="col-xs-2 card">
-              <div class='front'>
-              </div>
-              <div class='back'>
-                <img src="images/card-back.png">
-              </div>
-            </div>
-          </div>
-        <!-- End of Row #3  -->
-        </div>
-
-      <!-- End of #game-area-->
+        <!-- End of main-container-->
       </div>
-      <!-- End of main-container-->
     </div>
+
+    <div class='game-inactive'>
+      <h1>Game is best experienced in Landscape</h1>
+    </div>
+    
   </body>
 </html>
