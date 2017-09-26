@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Memory Match | Home</title>
+    <title>Memory Match</title>
 
     <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -20,8 +20,6 @@
         <img src="images/header_logo.jpeg" alt="Game Logo">
 
         <div class="header_menu">
-          <h2 class='game_menu'><a href="#">Game Settings</a></h2>
-          <h1 class="game_title"><a href="about.html">About</a></h1>
         </div>
 
       </div>
@@ -55,7 +53,11 @@
 
         <!-- Main Game Container Div -->
         <div id="game-area">
-          <h1 class='win'>Congratulations, You Won!!!!</h1>
+          <div class='row win'>
+            <div class="col-xs-offset-4 col-xs-4">
+              <button type='button' class='btn btn-block btn-primary' onclick="resetGame()">Play Again??</button>
+            </div>
+          </div>
           <!-- Row #1  -->
           <div class='row row1'>
 
