@@ -56,7 +56,6 @@ function cardClicked() {
       secondCardClicked = null;
       // if a match is found increase counter
       if (matchCounter === totalPossibleMatches){
-        $('.card').hide();
         $('.win').show();
       } else {
         displayStats();
@@ -85,7 +84,7 @@ function timeOut() {
     secondCardBack.parent('.card').removeClass('flipped');
     console.log('no match found');
     $('#game-area').removeAttr('style');
-  }, 2500);
+  }, 1500);
 }
 
 function displayStats() {

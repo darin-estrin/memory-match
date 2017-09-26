@@ -109,6 +109,10 @@ body {
   height: 22vh;
 }
 
+.back:hover {
+  cursor: pointer;
+}
+
 .row2 {
   position: relative;
   top: 25%;
