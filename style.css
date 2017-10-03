@@ -20,6 +20,10 @@ body {
   margin: 0;
 }
 
+h3 {
+  margin: 0;
+}
+
 .game_menu {
   margin: 0;
   font-size: 4vmin;
@@ -36,13 +40,11 @@ body {
   margin-bottom: 2%;
 }
 
-#header a {
+#header h2 {
   text-decoration: none;
   color: red;
-}
-
-#header a:hover{
-  color: blue;
+  margin: 0;
+  padding-top: 20px;
 }
 
 .main-container {
@@ -126,6 +128,7 @@ body {
 .win {
   color:red;
   text-align: center;
+  margin-top: 0;
 }
 
 #about_me_photo {

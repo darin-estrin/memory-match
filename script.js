@@ -15,7 +15,6 @@ var cards = ['images/bigga_ork.png', 'images/bigga_ork.png', 'images/chaos_card.
 
 function initGame() {
   $('.win').hide();
-  console.log('game started');
   $('.card').on('click', cardClicked);
   $('.reset').click(resetGame);
   $('.reset').click(randomizeCards);
@@ -39,14 +38,12 @@ function cardClicked() {
     secondCardBack = $(this).find('.back');
     secondCardBack.hide();
     secondCardClicked.css('pointer-events', 'none');
-    console.log('comparing cards for match');
     attempts++;
     $('.card').on('click', function(){
          $(this).addClass('flipped');
       });
     // comapre firstCardClicked and secondCardClicked for a match
     if (firstCardClicked.find('img').attr('src') === secondCardClicked.find('img').attr('src')){
-      console.log('match found');
       matchCounter++;
       matches++;
       accuracy = parseInt(matches / attempts * 100);
@@ -82,7 +79,6 @@ function timeOut() {
     secondCardBack.show();
     firstCardBack.parent('.card').removeClass('flipped');
     secondCardBack.parent('.card').removeClass('flipped');
-    console.log('no match found');
     $('#game-area').removeAttr('style');
   }, 1500);
 }
